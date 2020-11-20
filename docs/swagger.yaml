@@ -1,0 +1,87 @@
+host: localhost:8081
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Nano backend developed in golang.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger nano backend API
+  version: "1.0"
+paths:
+  /getBalance/{address}:
+    get:
+      consumes:
+      - application/json
+      description: return a list of locations
+      operationId: /getBalance/:address
+      parameters:
+      - description: Address of the wallet
+        in: path
+        name: address
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "404":
+          description: Page not found
+          schema:
+            type: string
+        "415":
+          description: Invalid media type, must be application/json
+          schema:
+            type: string
+      summary: fetches all locations by ip
+  /getGeoLocations:
+    get:
+      consumes:
+      - application/json
+      description: return a list of locations
+      operationId: /getGeoLocations
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "404":
+          description: Page not found
+          schema:
+            type: string
+        "415":
+          description: Invalid media type, must be application/json
+          schema:
+            type: string
+      summary: fetches all locations by ip
+  /getPeers:
+    get:
+      consumes:
+      - application/json
+      description: return a list of peers
+      operationId: /getPeers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "404":
+          description: Page not found
+          schema:
+            type: string
+        "415":
+          description: Invalid media type, must be application/json
+          schema:
+            type: string
+      summary: fetches all peers
+swagger: "2.0"

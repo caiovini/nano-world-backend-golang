@@ -1,0 +1,9 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /getBalance/:address      --> nano-world-backend-golang/routes.GetBalance.func1 (4 handlers)
+[GIN-debug] GET    /getPeers                 --> nano-world-backend-golang/routes.GetPeers.func1 (4 handlers)
+[GIN-debug] GET    /getGeoLocations          --> nano-world-backend-golang/routes.GetGeoLocations.func1 (4 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (4 handlers)
+127.0.0.1 - [Fri, 20 Nov 2020 17:13:43 -03] "GET /getBalance/xrb_1111111111111111111111111111111111111111111111111111hifc8npp HTTP/1.1 500 3.068015227s "Go-http-client/1.1" "

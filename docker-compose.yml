@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+    nano-world-golang:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: nano-world-golang:latest
+        ports:
+            - "8081:8081"
+        environment:
+            - nano-world-golang_SERVICE__MODE="env"
+            - ...
+        volumes:
+            - type: bind
+              source: "/home/logs"
+              target: "/go/src/nano-world-backend-golang/logs"
+
+# Excute --> sudo docker-compose up -d
