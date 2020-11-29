@@ -71,5 +71,6 @@ func initServer() *gin.Engine {
 
 func main() {
 
+	fmt.Print("listen and serve on 0.0.0.0:8081")
 	initServer().Run(":8081") // listen and serve on 0.0.0.0:8081
 }
